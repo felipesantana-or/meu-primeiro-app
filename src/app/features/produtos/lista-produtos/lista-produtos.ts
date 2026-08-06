@@ -20,6 +20,10 @@ export class ListaProdutos {
   //OBSERVA OUTRO SIGNAL E SE ATUALIZA AUTOMATICAMENTE
   totalProdutos = computed(() => this.produtos().length);
 
+  valorTotal = computed(() => {
+    return this.produtos().reduce((total, item) => total + item.preco, 0);
+  });
+
 
 
   exibirProduto(nome: string) {
