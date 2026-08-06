@@ -36,5 +36,10 @@ export class ListaProdutos {
       { nome: 'Teclado', preco: 250 }]);
   }
 
+  //se altera um item do writable signal
+  substituirProdutos() {
+    this.produtos.set([{ nome: 'Produto novo', preco: 999 }]);
+  }
+
 
 }
