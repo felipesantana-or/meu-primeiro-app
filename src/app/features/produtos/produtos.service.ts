@@ -15,9 +15,12 @@ import { Injectable, inject } from '@angular/core';
   export class ProdutosService {
     private http = inject(HttpClient);
 
-    private API = 'https://fakestoreapi.com/products';
 
+    
+   private API = 'https://fakestoreapi.com/products';
+   
     buscarProdutos() {
+
       return this.http.get<ProdutoApi[]>(this.API);
     }
 
