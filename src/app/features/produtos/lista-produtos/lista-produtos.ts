@@ -43,6 +43,8 @@ export class ListaProdutos {
 
   carrinho = signal<{ nome: string; preco: number }[]>([]);
 
+  erro = signal<string | null>(null);
+
   // COMPUTED
 
   totalProdutos = computed(() => this.produtos().length);
@@ -115,7 +117,7 @@ export class ListaProdutos {
 
       error: (erro) => {
         console.error('Erro ao carregar produtos:', erro);
-
+         
         this.carregando.set(false);
       },
     });
