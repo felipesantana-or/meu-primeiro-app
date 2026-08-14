@@ -1,5 +1,4 @@
-
-  <!-- Seção de Produtos -->
+<!-- Seção de Produtos -->
 <section>
   <h2>Produtos:</h2>
 
@@ -36,9 +35,17 @@
     }
   </h2>
 
-  <p><button (click)="adicionarProduto()">Adicionar Produto</button></p>
+  <p>
+    <button mat-raised-button color="primary" (click)="adicionarProduto()">
+      Adicionar Produto
+    </button>
+  </p>
 
-  <p><button (click)="substituirProdutos()">Substituir Lista</button></p>
+  <p>
+    <button mat-stroked-button color="accent" (click)="substituirProdutos()">
+      Substituir Lista
+    </button>
+  </p>
 
   <h2>Total de produtos: {{ totalProdutos() }}</h2>
 
@@ -58,4 +65,3 @@
   <p><strong>Itens no carrinho:</strong> {{ quantidadeCarrinho() }}</p>
   <p><strong>Total do Carrinho:</strong> R$ {{ totalCarrinho().toFixed(2) }}</p>
 </section>
-

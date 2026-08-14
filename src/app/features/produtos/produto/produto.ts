@@ -1,12 +1,17 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+
+
 
 @Component({
   selector: 'app-produto',
-  imports: [CurrencyPipe],
+ imports: [CurrencyPipe, MatButtonModule, MatCardModule],
   templateUrl: './produto.html',
   styleUrl: './produto.css',
 })
+
 export class Produto {
   @Input() nome: string = '';
   @Input() preco: number = 0;
